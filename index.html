@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wind Correction</title>
+	
+	<style>
+		* { font-family: helvetica; }
+		body { margin: 25px; }
+		p { display: inline; }
+	</style>
+</head>
+<body>
+	<h1>Wind Correction</h1>
+	<h3>A simple tool to correct a flight path when considering wind by subtracting vectors.</h3>
+	<p>Welcome to Wind Correction! To use the program, enter in the desired parameters into the boxes and click 'Submit'. Submitting gives the needed direction and speed of travel to arrive at your destination in the necessary amount of time.</p><br><br>
+	<p><strong>How it works:</strong> the directions and magnitudes of the destination vector and total wind vector are broken down into components, where the total wind vector is determined by the wind speed multiplied by time. Then, the wind is subtracted from the destination to get the needed vector of travel. Using trigonometry the desired angle of travel (bearing) is determined along with the magnitude (given by the Pythagorean Theorem). Finally, this result is outputted.</p><br><br>
+	<p>Enter the distance to the destination (in km):  </p><input type="text" id="dl"><br><br>
+	<p>Enter the bearing of the destination:  </p><input type="text" id="db"><br><br>
+	<p>Enter the wind speed (in km/h):  </p><input type="text" id="ws"><br><br>
+	<p>Enter the wind bearing:  </p><input type="text" id="wb"><br><br>
+	<p>Enter the amount of time to get to the destination (in hours):  </p><input type="text" id="t"><br><br>
+	<button onclick="calculate()">Submit</button><br><br>
+    <script src="./main.js"></script>
+	<span id="final"></span>
+</body>
+</html>
